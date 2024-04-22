@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QuizAppByCouchBase" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- res/values/styles.xml -->
+    <style name="ScoreTextView">
+        <item name="android:textColor">#000000</item> <!-- Text color -->
+        <item name="android:textSize">14sp</item> <!-- Text size -->
+        <item name="android:padding">8dp</item> <!-- Padding -->
+        <item name="android:background">@drawable/border_background</item> <!-- Background with border -->
+    </style>
+    <!-- res/values/styles.xml -->
+    <style name="ScoreRowLayout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item> <!-- Padding between columns -->
+        <item name="android:layout_marginBottom">4dp</item> <!-- Margin between rows -->
+    </style>
+
+
+</resources>
