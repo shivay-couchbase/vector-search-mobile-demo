@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadImage"
+    android:gravity="center"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:layout_marginBottom="30dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/upload_image"
+        android:layout_margin="40dp"
+        android:textColor="@android:color/white"></Button>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/image_view"
+        android:layout_margin="20dp"
+        ></ImageView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_startquiz"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Start Quiz"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        ></Button>
+
+
+
+</LinearLayout>

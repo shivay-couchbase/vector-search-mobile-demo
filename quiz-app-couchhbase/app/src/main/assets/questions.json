@@ -1,0 +1,102 @@
+[
+  {
+    "unique_id": 1,
+    "question": "In astronomy, what are 'Starboys' commonly known as?",
+    "optionOne": "Planets",
+    "optionTwo": "Galaxies",
+    "optionThree": "Asteroids",
+    "optionFour": "Stars",
+    "correctAns": 4,
+    "category": "Starboys"
+  },
+  {
+    "unique_id": 2,
+    "question": "What is the term used for a group of 'Starboys' that form a recognizable pattern?",
+    "optionOne": "Constellation",
+    "optionTwo": "Nebula",
+    "optionThree": "Black Hole",
+    "optionFour": "Supernova",
+    "correctAns": 1,
+    "category": "Starboys"
+  },
+  {
+    "unique_id": 3,
+    "question": "What are 'Starboys' primarily composed of?",
+    "optionOne": "Helium",
+    "optionTwo": "Hydrogen",
+    "optionThree": "Oxygen",
+    "optionFour": "Carbon",
+    "correctAns": 2,
+    "category": "Starboys"
+  },
+  {
+    "unique_id": 4,
+    "question": "What process do 'Starboys' undergo to produce energy?",
+    "optionOne": "Fusion",
+    "optionTwo": "Fission",
+    "optionThree": "Combustion",
+    "optionFour": "Decay",
+    "correctAns": 1,
+    "category": "Starboys"
+  },
+  {
+    "unique_id": 5,
+    "question": "What determines the lifespan of 'Starboys'?",
+    "optionOne": "Mass",
+    "optionTwo": "Temperature",
+    "optionThree": "Size",
+    "optionFour": "Color",
+    "correctAns": 1,
+    "category": "Starboys"
+  },
+  {
+    "unique_id": 6,
+    "question": "What is the name of a polygon with six sides?",
+    "optionOne": "Pentagon",
+    "optionTwo": "Hexagon",
+    "optionThree": "Octagon",
+    "optionFour": "Triangle",
+    "correctAns": 2,
+    "category": "Shapes"
+  },
+  {
+    "unique_id": 7,
+    "question": "How many sides does a triangle have?",
+    "optionOne": "Three",
+    "optionTwo": "Four",
+    "optionThree": "Five",
+    "optionFour": "Six",
+    "correctAns": 1,
+    "category": "Shapes"
+  },
+  {
+    "unique_id": 8,
+    "question": "Which of the following shapes has no vertices?",
+    "optionOne": "Circle",
+    "optionTwo": "Square",
+    "optionThree": "Rectangle",
+    "optionFour": "Triangle",
+    "correctAns": 1,
+    "category": "Shapes"
+  },
+  {
+    "unique_id": 9,
+    "question": "What is the shape of a stop sign?",
+    "optionOne": "Triangle",
+    "optionTwo": "Rectangle",
+    "optionThree": "Octagon",
+    "optionFour": "Circle",
+    "correctAns": 3,
+    "category": "Shapes"
+  },
+  {
+    "unique_id": 10,
+    "question": "A cube has how many faces?",
+    "optionOne": "4",
+    "optionTwo": "5",
+    "optionThree": "6",
+    "optionFour": "7",
+    "correctAns": 3,
+    "category": "Shapes"
+  }
+]
