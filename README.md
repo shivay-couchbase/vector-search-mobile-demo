@@ -1,6 +1,6 @@
 # vector-search-mobile-demo
 
-Kotlin demo for vector search
+Kotlin demo for vector search for images classification
 
 The demo consists of two different projects:
 - Python project consisting in an API based on Alexnet to generate embeddings on images
