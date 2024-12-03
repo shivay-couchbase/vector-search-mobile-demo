@@ -15,8 +15,6 @@ import com.couchbase.lite.Query
 import com.couchbase.lite.QueryBuilder
 import com.couchbase.lite.ResultSet
 import com.couchbase.lite.SelectResult
-import com.couchbase.lite.VectorEncoding
-import com.couchbase.lite.VectorIndexConfiguration
 import com.couchbase.lite.VectorIndexConfigurationFactory
 import com.couchbase.lite.newConfig
 import kotlinx.coroutines.Dispatchers
