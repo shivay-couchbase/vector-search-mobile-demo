@@ -13,11 +13,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.documentfile.provider.DocumentFile
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,7 +34,7 @@ class UploadImage : AppCompatActivity() {
 
     val retrofit = Retrofit.Builder()
         .baseUrl("http://10.0.2.2:5000")
-//        .baseUrl("http://127.0.0.1:5000")
+   //    .baseUrl("http://127.0.0.1:5000")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

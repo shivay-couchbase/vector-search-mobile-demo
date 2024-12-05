@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.1"
+agp = "8.5.0"
 kotlin = "1.9.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -9,9 +9,9 @@ appcompat = "1.6.1"
 material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
-couchbaseLiteVersion = "3.2.0-beta.1"
+couchbaseLiteVersion = "3.2.1"
 roomCompiler = "2.6.1"
-vectorSearch = "1.0.0-beta.1"
+vectorSearch = "1.0.0"
 retrofitversion = "2.9.0"
 
 [libraries]

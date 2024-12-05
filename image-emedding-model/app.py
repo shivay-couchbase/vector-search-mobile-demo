@@ -25,7 +25,7 @@ class ImageEmbeddingNet(nn.Module):
 alexnet = models.alexnet(pretrained=True)
 
 # Modify AlexNet for image feature extraction
-alexnet.classifier[6] = nn.Linear(4096, 9)  # Output size changed to 9 for a 1D array
+alexnet.classifier[6] = nn.Linear(4096, 3)  # Output size changed to 9 for a 1D array
 
 # Set AlexNet to evaluation mode
 alexnet.eval()

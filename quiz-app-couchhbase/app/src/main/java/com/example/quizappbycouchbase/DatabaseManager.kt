@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.constraintlayout.widget.StateSet.TAG
 import com.couchbase.lite.Collection
 import com.couchbase.lite.CouchbaseLite
+import com.couchbase.lite.CouchbaseLiteException
 import com.couchbase.lite.DataSource
 import com.couchbase.lite.Database
 import com.couchbase.lite.MutableArray
@@ -14,9 +15,8 @@ import com.couchbase.lite.Query
 import com.couchbase.lite.QueryBuilder
 import com.couchbase.lite.ResultSet
 import com.couchbase.lite.SelectResult
-import com.couchbase.lite.VectorEncoding
-import com.couchbase.lite.VectorIndexConfiguration
-import kotlinx.coroutines.CoroutineScope
+import com.couchbase.lite.VectorIndexConfigurationFactory
+import com.couchbase.lite.newConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -45,8 +45,15 @@ class DatabaseManager(private val context: Context) {
 
 
     init {
+
         CouchbaseLite.init(context)
+        try {
+            CouchbaseLite.enableVectorSearch()
+        } catch (e: CouchbaseLiteException) {
+            throw java.lang.IllegalStateException("Could not enable vector search", e)
+        }
         Log.i(TAG, "Database created: User")
+
         initializeDatabases()
     }
 
@@ -128,10 +135,10 @@ class DatabaseManager(private val context: Context) {
                 imagesCategoryCollection?.save(mutableDocument)
             }
             Log.i("JSON", "ALL JSON ADDED")
-            val config = VectorIndexConfiguration("imagevect_l2", 3, 3)
-            config.encoding = VectorEncoding.none()
-            imagesCategoryCollection!!.createIndex(INDEX_NAME, config)
 
+            imagesCategoryCollection?.createIndex(INDEX_NAME,
+                            VectorIndexConfigurationFactory.newConfig("imagevect_l2", 3L, 100L))
+                ?: throw IllegalStateException("No such collection: colors")
 
             Log.i("COUNT2",jsonArray_questions.length().toString())
             // Store JSON data in the database
@@ -202,7 +209,8 @@ class DatabaseManager(private val context: Context) {
         if (query == null) {
             val sql = "SELECT unique_id, name, imagevect_l2, category " +
                     "FROM $defaultImageCollection " +
-                    "WHERE vector_match($INDEX_NAME, \$vector , 8)"
+                    "ORDER BY APPROX_VECTOR_DISTANCE(imagevect_l2, \$vector)" +
+                    "LIMIT 1";
             query = database!!.createQuery(sql)
         }
 
